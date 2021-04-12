@@ -42,33 +42,27 @@
     
 
 }
-/* css for modal */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 8%; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: scroll; /* Enable scroll if needed */
-    /* overflow-x: auto; */
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
 
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    overflow: scroll;
-}
+.btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    max-height: 40px;
+    width: 40px;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: RoyalBlue;
+  }
+  
+  
+  
+  
+/* css for modal */
 
 .close {
     color: #aaaaaa;
@@ -82,6 +76,65 @@
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+#exemple{
+    visibility: hidden;
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 1000;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+    /*
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+    */
+}
+
+#exemple .modal-content{
+    width: 70%;
+    height: 65%;
+
+    background-color: #f2f2f2;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border:1px solid #666666;
+    padding: 15px;
+    text-align: center;
+    font-weight:bold;
+    font-size: 15px;
+    border:3px solid #cccccc;
+    position: absolute;
+    left:50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    
+    
+    
+    /* scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; */
+
+}
+#exemple .modal-content::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+#exemple .modal-content::-webkit-scrollbar-thumb{
+    background: black;
+    border-radius: 10px;
+}
+#exemple .modal-content::-webkit-scrollbar-track{
+    background: transparent;
 }
 
 /* css for input */
@@ -98,6 +151,7 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px 5px 5px 5px;
     width: 20%;
+    height: 5%;
 }
 
 .input:focus{
@@ -105,4 +159,51 @@
 }
 .input-20:focus{
     box-shadow:0 0 5px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* css for table */
+
+table {
+    border-collapse: collapse;
+    width: 100%;  
+}
+
+th{
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: 1px solid #999;
+}
+td, th {
+    
+    padding: 0.5rem;
+    text-align: left;
+} 
+
+/* css for card */ 
+.card{
+    width: 30%;
+    margin: 10px;
+    border-radius:5px;
+    box-shadow:0 0 5px 2px rgba(0, 0, 0, 0.3);
+    
+}
+
+.card-header{
+    width: 100%;
+    height: 60px;
+    background-color: rgba(240, 228, 228, 0.808);
+    display: flex;
+    justify-content: center;
+}
+
+.card-footer{
+    background-color: rgba(240, 228, 228, 0.808);
+    display: flex;
+    justify-content: end;
+    width: 15%;
+    bottom: 0;
+}
+/* row */
+.row{
+    display: flex;
 }
